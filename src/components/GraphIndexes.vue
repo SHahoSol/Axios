@@ -1,6 +1,6 @@
 <template>
   <div class="search">
-    <h2>Type In Your Search Term</h2>
+    <h2>{{ msg }}</h2>
     <form v-on:submit.prevent="getResult(query)">
       <input type="text" placeholder="Type in your search" v-model="query" />
     </form>
@@ -19,7 +19,7 @@ export default {
   name: 'search',
   data () {
     return {
-      msg: 'Search',
+      msg: 'NASA Search API',
       query: '',
       results: ''
     }
